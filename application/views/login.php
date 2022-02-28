@@ -5,13 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Login</title>
+
+  <title>Login | MS GLOW</title>
   <?php $this->load->view('partials/head'); ?>
 </head>
-<body class="hold-transition login-page">
+<body style="background-color:#666" class="hold-transition login-page">
 
   <div class="login-box">
-    <div class="login-logo">Login</div>
+    <div class="login-logo"><img style="width:350px;" src="<?= base_url('assets/vendor/adminlte/') ?>dist/img/msglow.png"></div>
     <div class="card">
       <div class="card-body login-card-body">
         <p class="login-box-msg">Login untuk masuk</p>
