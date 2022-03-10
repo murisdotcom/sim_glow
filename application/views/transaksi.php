@@ -54,7 +54,7 @@
               <label>Barcode</label>
               <div class="form-inline">
                 <select id="barcode" class="form-control select2 col-sm-6" onchange="getNama()"></select>
-                <span class="ml-3 text-muted" id="nama_produk"></span>
+                <!-- <span class="ml-3 text-muted" id="nama_produk"></span> -->
               </div>
               <small class="form-text text-muted" id="sisa"></small>
             </div>
