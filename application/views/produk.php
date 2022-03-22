@@ -38,9 +38,19 @@
     <section class="content">
       <div class="container-fluid">
         <div class="card">
-          <div class="card-header">
-            <button class="btn btn-success" data-toggle="modal" data-target="#modal" onclick="add()">Add</button>
-          </div>
+        	<div class="card-header">
+        		<div class="row">
+        			<div class="col">
+        				<button class="btn btn-success" data-toggle="modal" data-target="#modal" onclick="add()">Add</button>
+        			</div>
+        			<div class="card">
+        				<button class="btn btn-primary" data-toggle="modal" data-target="#modal" onclick="add()">Print</button>
+        			</div>
+        		</div>
+        	</div>
+          
+          
+
           <div class="card-body">
             <table class="table w-100 table-bordered table-hover" id="produk">
               <thead>
