@@ -1,12 +1,13 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Produk extends CI_Controller {
+class Produk extends CI_Controller
+{
 
 	public function __construct()
 	{
 		parent::__construct();
-		if ($this->session->userdata('status') !== 'login' ) {
+		if ($this->session->userdata('status') !== 'login') {
 			redirect('/');
 		}
 		$this->load->model('produk_model');
@@ -29,7 +30,7 @@ class Produk extends CI_Controller {
 					'satuan' => $produk->satuan,
 					'harga' => $produk->harga,
 					'stok' => $produk->stok,
-					'action' => '<button class="btn btn-sm btn-success" onclick="edit('.$produk->id.')">Edit</button> <button class="btn btn-sm btn-danger" onclick="remove('.$produk->id.')">Delete</button>'
+					'action' => '<button class="btn btn-sm btn-success" onclick="edit(' . $produk->id . ')">Edit</button> <button class="btn btn-sm btn-danger" onclick="remove(' . $produk->id . ')">Delete</button>'
 				);
 			}
 		} else {
@@ -75,7 +76,7 @@ class Produk extends CI_Controller {
 			'harga' => $this->input->post('harga'),
 			'stok' => $this->input->post('stok')
 		);
-		if ($this->produk_model->update($id,$data)) {
+		if ($this->produk_model->update($id, $data)) {
 			echo json_encode('sukses');
 		}
 	}
@@ -145,7 +146,6 @@ class Produk extends CI_Controller {
 		$data['produk'] = $this->produk_model->tampil_data("produk")->result();
 		$this->load->view('print_produk', $data);
 	}
-
 }
 
 /* End of file Produk.php */
