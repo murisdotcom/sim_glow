@@ -140,6 +140,12 @@ class Produk extends CI_Controller {
 		echo json_encode($produk);
 	}
 
+	public function print()
+	{
+		$data['produk'] = $this->produk_model->tampil_data("produk")->result();
+		$this->load->view('print_produk', $data);
+	}
+
 }
 
 /* End of file Produk.php */

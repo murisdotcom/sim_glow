@@ -74,6 +74,11 @@ class Produk_model extends CI_Model {
 		return $this->db->query('SELECT produk.nama_produk, produk.stok FROM `produk` ORDER BY CONVERT(stok, decimal) DESC LIMIT 50')->result();
 	}
 
+	public function tampil_data()
+	{
+		return $this->db->get('produk');
+	}
+
 }
 
 /* End of file Produk_model.php */
