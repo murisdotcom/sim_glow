@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Transaksi_model extends CI_Model {
+class Transaksi_model extends CI_Model
+{
 
 	private $table = 'transaksi';
 
@@ -44,7 +45,7 @@ class Transaksi_model extends CI_Model {
 		foreach ($barcode as $key => $value) {
 			$this->db->select('nama_produk');
 			$this->db->where('id', $value);
-			$data[] = '<tr><td>'.$this->db->get('produk')->row()->nama_produk.' ('.$total[$key].')</td></tr>';
+			$data[] = '<tr><td>' . $this->db->get('produk')->row()->nama_produk . ' (' . $total[$key] . ')</td></tr>';
 		}
 		return join($data);
 	}
@@ -92,7 +93,6 @@ class Transaksi_model extends CI_Model {
 		}
 		return $data;
 	}
-
 }
 
 /* End of file Transaksi_model.php */
